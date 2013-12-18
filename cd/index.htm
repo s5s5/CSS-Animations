@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="Tencent 腾讯成都招聘">
+<meta name="Keywords" content="Tencent,腾讯,成都,招聘">
+<title>Tencent 腾讯成都招聘</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="top">
+	<div class="cont">
+		<h1 class="logo"><strong class="none">Tencent 腾讯成都招聘</strong></h1>
+		<ul class="nav">
+			<li><a href="job.htm" class="job"><span class="none">成都招聘信息</span></a></li>
+			<li><a href="campus.htm" class="campus"><span class="none">腾讯校园招聘</span></a></li>
+			<li><a href="index.htm" class="info info_on"><span class="none">腾讯成都简介</span></a></li>
+		</ul>
+		<a href="http://t.qq.com/TX-CDHR" target="_blank" class="tqq">收听腾讯成都招聘</a>
+	</div>
+	<div class="banner"><img src="img/banner.jpg" alt=""></div>
+</div>
+<div class="main">
+	<div class="cont">
+		<div class="side">
+			<h2><strong class="tit1"><span class="none">腾讯成都简介</span></strong></h2>
+			<ul class="sort">
+				<li><a href="#about" class="on" id="aboutId" onclick="leftMenu(this.id)">成分简介</a></li>
+				<li><a href="#contact" id="contactId" onclick="leftMenu(this.id)">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="about"><a name="about"></a>
+				<h3>成分简介</h3>
+				<p>腾讯成都分公司2007年11月宣布成立。2008年5月，在四川地震后的十天，和成都市市政府正式签署投资总额5.5亿元的合作意向协议，也是灾后首家入川投资的企业。2008年7月正式注册成立腾讯科技（成都）有限公司，投资选址位于高新区天府软件园二期，并于2011年再次宣布追加投资额度至20亿元，包括购买园区C4、C5栋楼宇，以及位于开发区的50余亩科研用地，为腾讯在成都及西南的发展奠定了坚实的基础。</p>
+				<p>腾讯成都分公司目前开展的业务包括：大型网络游戏开发、手机应用及游戏产品开发、互联网及桌面软件开发、呼叫中心及在线客户服务、搜索技术服务、地方网络媒体及生活门户（大成网）、产品测试等领域，人员规模已经超过2000人。随着成都的经济发展及城市综合实力的提升，成都的人才吸引优势也越来越强，公司在成都的业务拓展也能更加有效地吸引西部人才，公司越来越多的BU及产品都将在成都拓展业务，成都分公司也将成为腾讯又一个非常重要的区域人才中心。</p>
+				<p>腾讯于2012年在成都天府新区已经启动建设两栋新的大楼，建筑面积超过20万平方米，预计2014年底初步建成，建成后将成为能够容纳万名员工的腾讯在中国西部最大的产品研发基地。</p>
+				<div class="img"><img src="img/pic01.jpg" alt=""><p>员工风采</p></div>
+				<div class="img"><img src="img/pic02.jpg" alt=""><p>成都新大楼规划图</p></div>
+			</div>
+			<div class="contact"><a name="contact"></a>
+				<h3>联系我们</h3>
+				<p>
+					<strong>腾讯成都分公司</strong><br>
+					地址：成都高新区天华二路81号天府软件园C区4号楼<br>
+					邮编：610041<br>
+					电话：86-028-85225111<br>
+					传真：86-028-85980512
+				</p>
+				<p>
+					<strong>Tencent Chengdu Branch</strong><br>
+					C4, Tianfu Software Park, No.81, Tianhua 2nd Road, Hi-tech Area, Chengdu<br>
+					Postal Code: 610061<br>
+					Tel: 86-028-85225111<br>
+					Fax: 86-028-85980512
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="foot">
+	<div class="cont">
+		<p class="footmenu">
+			<a target="_blank" href="http://www.tencent.com/">关于腾讯</a> |
+			<a target="_blank" href="http://www.qq.com/contract.shtml">服务条款</a> |
+			<a target="_blank" href="http://adver.qq.com/">广告服务</a> |
+			<a target="_blank" href="http://hr.tencent.com/">腾讯招聘</a> |
+			<a target="_blank" href="http://service.qq.com/">客服中心</a> |
+			<a target="_blank" href="http://www.qq.com/map/">网站导航</a>
+		</p>
+		<p class="footcopy">
+			Copyright &copy; 1998 - <span id="copyendyear"><script type="text/javascript">document.write(new Date().getFullYear());</script></span> Tencent.
+			<a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">All Rights Reserved</a>.
+			腾讯公司
+			<a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a>
+		</p>
+	</div>
+</div>
+<script language="javascript">
+var allId = "aboutId"; 
+function leftMenu(obj){
+	if(obj==allId) return;
+	document.getElementById(obj).className = "on";
+	document.getElementById(allId).className = "";
+	allId = obj;
+}
+</script>
+</body>
+</html>

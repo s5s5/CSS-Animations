@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		body{background-color:#fff;}
+		.box {
+			margin: 30px;
+			height: 50px;
+			width: 50px;
+			background-color: blue;
+		}
+		.box.horizTranslate {
+			-webkit-transition: 3s;
+			-moz-transition: 3s;
+			-ms-transition: 3s;
+			-o-transition: 3s;
+			transition: 3s;
+			margin-left: 50% !important;
+		}
+	</style>
+</head>
+<body>
+<h1>Transitions动画停止</h1>
+<div class='box'></div>
+<button class='toggleButton' value='play'>Play</button>
+<script src="../js/jquery-2.0.3.min.js"></script>
+<script>
+$(function(){
+	var $boxTwo = $('.box');
+	$('.toggleButton').on('click', function() {
+		if($(this).html() === 'Play')
+		{
+			$(this).html('Pause');
+			$boxTwo.addClass('horizTranslate');
+		} else {
+			$(this).html('Play');
+			var computedStyle = $boxTwo.css('margin-left');
+			$boxTwo.removeClass('horizTranslate');
+			$boxTwo.css('margin-left', computedStyle);
+		}
+	});
+});
+</script>
+</body>
+</html>

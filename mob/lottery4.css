@@ -1,0 +1,62 @@
+/*==============================
+ * Copy Right: Tencent ISUX
+ * Project: Qzone ACT Touch
+ * @author: super
+=================================*/
+/*RESET*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,a,address,
+em, img, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td,i,b,s {
+	margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%;}
+
+ul,ol{list-style: none}
+a img { border:none;vertical-align: top; }
+a {text-decoration: none;}
+
+button { overflow:visible; }
+button::-moz-focus-inner { padding:0; }
+.none{display:none;}
+
+.lottery-round2{background-color:#fff; width:320px; margin:0 auto; position:relative;}
+.lottery-round2 .tool{font-size:14px; color:#000; position:relative; height:35px;}
+.lottery-round2 .tool .num{position:absolute; top:0; left:10px;}
+.lottery-round2 .tool .log{position:absolute; top:0; right:10px;}
+.lottery-round2 .tool strong{color:#cc3d48; font-size:18px; padding:0 3px;}
+.lottery-round2 .tool a{color:#cc3d48;}
+.lottery-round2 .lottery{background-image:url("img/lottery4.jpg"); width:320px; height:320px; margin:0 auto; position:relative;}
+.lottery-round2 .lottery .play{background-color:transparent; border-width:0; width:58px; height:37px; position:absolute; top:140px; left:128px; cursor:pointer; z-index:1;}
+.lottery-round2 .lottery .pointer{position:absolute; top:99px; width:117px; height:117px; left:50%; margin-left:-58px;}
+.lottery-round2 .lottery .pointer .ico-pointer{position:absolute; top:0; left:63px; background-image:url("img/slice/play-lottery2-z.png"); width:26px; height:32px;}
+.lottery-round2 .lottery .pointer1{-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+.lottery-round2 .lottery .pointer2{-webkit-transform: rotate(45deg); transform: rotate(45deg);}
+.lottery-round2 .lottery .pointer3{-webkit-transform: rotate(90deg); transform: rotate(90deg);}
+.lottery-round2 .lottery .pointer4{-webkit-transform: rotate(135deg); transform: rotate(135deg);}
+.lottery-round2 .lottery .pointer5{-webkit-transform: rotate(180deg); transform: rotate(180deg);}
+.lottery-round2 .lottery .pointer6{-webkit-transform: rotate(225deg); transform: rotate(225deg);}
+.lottery-round2 .lottery .pointer7{-webkit-transform: rotate(270deg); transform: rotate(270deg);}
+.lottery-round2 .lottery .pointer8{-webkit-transform: rotate(315deg); transform: rotate(315deg);}
+.lottery-round2 .lottery .animation{
+	-webkit-animation:mask 1000ms linear 0 infinite normal forwards;
+	animation:mask 1000ms linear 0 infinite normal forwards;
+}
+@-webkit-keyframes mask {
+	0%			{ -webkit-transform: rotate(0deg);  }
+	12.5%		{ -webkit-transform: rotate(45deg);  }
+	25%			{ -webkit-transform: rotate(90deg);  }
+	32.5%		{ -webkit-transform: rotate(135deg);  }
+	50%			{ -webkit-transform: rotate(180deg);  }
+	62.5%		{ -webkit-transform: rotate(225deg);  }
+	75%			{ -webkit-transform: rotate(270deg);  }
+	87.5%		{ -webkit-transform: rotate(315deg);  }
+	100%		{ -webkit-transform: rotate(360deg);  }
+}
+@keyframes mask {
+	0%			{ transform: rotate(0deg);  }
+	12.5%		{ transform: rotate(45deg);  }
+	25%			{ transform: rotate(90deg);  }
+	32.5%		{ transform: rotate(135deg);  }
+	50%			{ transform: rotate(180deg);  }
+	62.5%		{ transform: rotate(225deg);  }
+	75%			{ transform: rotate(270deg);  }
+	87.5%		{ transform: rotate(315deg);  }
+	100%		{ transform: rotate(360deg);  }
+}

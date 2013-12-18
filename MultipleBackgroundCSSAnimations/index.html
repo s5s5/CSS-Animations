@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiple Background CSS Animations</title>
+
+	<style type="text/css">
+
+
+		@keyframes animatedBird{
+			from{
+				background-position:20px 20px, 30px 80px, 0 0;
+			}
+			to{
+				background-position:300px -90px, 30px 20px, 100% 0;
+			}
+		}
+
+		@-webkit-keyframes animatedBird{
+			from{
+				background-position:20px 20px, 30px 80px, 0 0;
+			}
+			to{
+				background-position:300px -90px, 30px 20px, 100% 0;
+			}
+		}
+
+		@-ms-keyframes animatedBird{
+			from{
+				background-position:20px 20px, 30px 80px, 0 0;
+			}
+			to{
+				background-position:300px -90px, 30px 20px, 100% 0;
+			}
+		}
+
+		@-moz-keyframes animatedBird{
+			from{
+				background-position:20px -90px, 30px 80px, 0 0;
+			}
+			to{
+				background-position:300px -90px, 30px 20px, 100% 0;
+			}
+		}
+
+		.animate-area2{
+			width:960px;
+			height:190px;
+
+			background-image:url(twitter-logo-bird.png), url(treehouseFrog.png), url(bg-clouds.png);
+			background-position:20px -90px, 30px 80px, 0px 0px;
+			background-repeat:no-repeat, no-repeat, repeat-x;
+
+			animation:animatedBird 4s linear infinite;
+			-ms-animation:animatedBird 4s linear infinite;
+			-moz-animation:animatedBird 4s linear infinite;
+			-webkit-animation:animatedBird 4s linear infinite;
+
+			overflow:hidden;
+		}
+	</style>
+</head>
+<body>
+<div class="animate-area animate-area2"></div>
+</body>
+</html>

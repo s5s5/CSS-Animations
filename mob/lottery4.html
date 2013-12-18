@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MOBILE活动 抽奖 公用样式</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 导航代码，内嵌页面，加速访问 -->
+	<link rel="stylesheet" href="lottery4.css">
+</head>
+<body>
+<article class="lottery-round2">
+	<div class="tool">
+		<p class="num">还有<strong>6</strong>次抽奖机会</p>
+		<p class="log"><a href="#">查看中奖记录</a></p>
+	</div>
+	<div class="lottery">
+		<div class="pointer"><div class="ico-pointer"></div></div>
+		<!--动的时候添加CLASS：'animation'-->
+		<!--指向八个奖品的CLASS：'pointer1 ~ pointer8'-->
+		<button type="button" class="play"><span class="none">点击抽奖</span></button>
+	</div>
+	<div class="show"></div>
+</article>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.lottery-round2 .play').click(function(event){
+			if ($('.pointer').hasClass('animation')){
+				$('.pointer').css({'animation-play-state':'running'});
+			} else {
+				$('.pointer').removeClass().addClass('pointer animation');
+			}
+			return false;
+		});
+		$('body').click(function(event){
+			$('.pointer').css({'animation-play-state':'paused'});
+		});
+		setInterval(function showNowCSS() {
+			$('.show').text($('.pointer').css('transform'));
+		},135)
+
+	});
+</script>
+</body>
+</html>

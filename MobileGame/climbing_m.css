@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* ===== 体感游戏城——障碍越野赛 手机样式 ===== */
+@import url('core_reset.css');/* 全局重置样式 */
+
+body{background-color:#ffcc15;}
+.none{display:none;}
+
+button{background-color:transparent; border-width:0; cursor:pointer;}
+.scene{position:relative; margin:0 auto;}
+
+.scene-connent .connent-phone{position:absolute;}
+.scene-connent .cing{position:absolute; background-color:#ffcc15; z-index:3;}
+.scene-connent .connent-pc{background-image:url("img/Steeplechase/mico_connectpc.png"); background-repeat:no-repeat; background-size:cover; width:186px; height:168px; position:absolute;}
+.scene-connent .connent-pc .connenting{background-image:url("img/Steeplechase/mico_connectxt2.png"); background-repeat:no-repeat; background-size:cover; width:70px; height:18px; position:absolute; top:51px; left:58px;}
+.scene-connent .connent-pc .connented{background-image:url("img/Steeplechase/mico_connectxt1.png"); background-repeat:no-repeat; background-size:cover; width:78px; height:18px; position:absolute; top:51px; left:54px;}
+
+.scene-select .select{background-image:url("img/Steeplechase/mico_select.png"); background-repeat:no-repeat; background-size:cover; width:163px; height:174px; position:absolute;}
+.scene-select .select .up{position:absolute; top:0; left:57px; width:49px; height:56px;}
+.scene-select .select .down{position:absolute; bottom:0; left:57px; width:49px; height:57px;}
+.scene-select .select .left{position:absolute; top:56px; left:0; width:57px; height:60px;}
+.scene-select .select .right{position:absolute; top:56px; right:0; width:57px; height:60px;}
+.scene-select .info{background-image:url("img/Steeplechase/mico_selply.png"); background-repeat:no-repeat; background-size:cover; width:156px; height:199px; position:absolute;}
+.scene-select .info .player{position:absolute; bottom:79px; left:0; width:100%; text-align:center;}
+.scene-select .info .player img{height:97px;}
+.scene-select .info .ok{position:absolute; bottom:0; left:0; width:100%; height:58px;}
+
+.scene-start .player{position:absolute; width:280px; text-align:center;}
+.scene-start .player img{height:97px;}
+.scene-start .start{background-image:url("img/Steeplechase/mbt_start.png"); background-repeat:no-repeat; background-size:cover; width:280px; height:60px; position:absolute;}
+.scene-start .wait{background-image:url("img/Steeplechase/mbt_wait.png"); background-repeat:no-repeat; background-size:cover; width:280px; height:60px; position:absolute;}
+.scene-start .loading{background-image:url("img/Steeplechase/mico_radish.png"); background-repeat:no-repeat; background-size:cover; width:68px; height:68px; position:absolute;}
+
+.scene-touch .touch{background-image:url("img/climbing/touch_m.png"); background-repeat:no-repeat; background-size:cover; width:278px; height:263px; position:absolute; top:50%; left:50%; margin:-131px 0 0 -139px;}
+.scene-touch .touch .flash1{position:absolute; top:79px; left:123px; width:15px; height:88px; background-color:#F3F3F3;}
+.scene-touch .touch .flash2{position:absolute; top:79px; left:142px; width:15px; height:88px; background-color:#F3F3F3;}
+
+.scene-win .result{position:absolute; left:50%; background-size:cover; background-repeat:no-repeat;}
+.scene-win .result_s{background-image:url("img/Javelin/s.png"); width:127px; height:158px; margin-left:-63px;}
+.scene-win .result_a{background-image:url("img/Javelin/a.png"); width:139px; height:156px; margin-left:-69px;}
+.scene-win .result_b{background-image:url("img/Javelin/b.png"); width:118px; height:155px; margin-left:-59px;}
+.scene-win .result_c{background-image:url("img/Javelin/c.png"); width:132px; height:160px; margin-left:-66px;}
+.scene-win .result_d{background-image:url("img/Javelin/d.png"); width:129px; height:154px; margin-left:-64px;}
+.scene-win .winbg{position:absolute; top:260px; left:50%; margin-left:-55px; background-image:url("img/Javelin/winbg.png"); background-repeat:no-repeat; background-size:cover; width:110px; height:27px;}
+.scene-win .player{position:absolute; top:278px; left:50%; margin-left:-55px; width:110px; height:auto; text-align:center;}
+.scene-win .player img{width:81px;}
+.scene-win .txt{position:absolute; top:480px; left:0; width:100%; text-align:center; font-weight:bold; line-height:1;}
+.scene-win .txt h2{font-family:tahoma; font-size:55px;}
+.scene-win .txt p{font-family:'微软雅黑'; font-size:15px;}
+.scene-win .plank{background-image:url("img/Steeplechase/playagain_m.png"); background-repeat:no-repeat; background-size:cover; width:109px; height:65px; position:absolute; top:0;}
+.scene-win .plank .again{position:absolute; top:25px; left:13px; width:84px; height:29px; cursor:pointer;}
+
+.scene-connent .cing{
+	-webkit-animation: cing 1s ease both infinite;
+	-moz-animation: cing 1s ease both infinite;
+	-ms-animation: cing 1s ease both infinite;
+	-o-animation: cing 1s ease both infinite;
+	animation: cing 1s ease both infinite;
+}
+
+.scene-touch .touch .flash1{
+	-webkit-animation: cing 1s ease both infinite;
+	-moz-animation: cing 1s ease both infinite;
+	-ms-animation: cing 1s ease both infinite;
+	-o-animation: cing 1s ease both infinite;
+	animation: cing 1s ease both infinite;
+}
+
+.scene-touch .touch .flash2{
+	-webkit-animation: cing 1s ease both infinite 500ms;
+	-moz-animation: cing 1s ease both infinite 500ms;
+	-ms-animation: cing 1s ease both infinite 500ms;
+	-o-animation: cing 1s ease both infinite 500ms;
+	animation: cing 1s ease both infinite 500ms;
+}
+
+.scene-win .result{
+	-webkit-animation: bounceIn 500ms ease both 200ms;
+	-moz-animation: bounceIn 500ms ease both 200ms;
+	-ms-animation: bounceIn 500ms ease both 200ms;
+	-o-animation: bounceIn 500ms ease both 200ms;
+	animation: bounceIn 500ms ease both 200ms;
+
+}
+.scene-win .winbg,
+.scene-win .player{
+	-webkit-animation: bounceIn 500ms ease both;
+	-moz-animation: bounceIn 500ms ease both;
+	-ms-animation: bounceIn 500ms ease both;
+	-o-animation: bounceIn 500ms ease both;
+	animation: bounceIn 500ms ease both;
+
+}
+.scene-win .txt{
+	-webkit-animation: bounceIn 500ms ease both 400ms;
+	-moz-animation: bounceIn 500ms ease both 400ms;
+	-ms-animation: bounceIn 500ms ease both 400ms;
+	-o-animation: bounceIn 500ms ease both 400ms;
+	animation: bounceIn 500ms ease both 400ms;
+
+}
+
+@media all and (orientation:portrait) {
+	.scene{width:320px;height:480px;}
+
+	.scene-connent .connent-phone{background-image:url("img/Steeplechase/mico_connect1.png"); background-repeat:no-repeat; background-size:cover; width:113px; height:234px; bottom:0; left:98px;}
+	.scene-connent .cing{top:241px; left:121px; width:70px; height:40px;}
+	.scene-connent .connent-pc{top:60px; left:65px;}
+
+	.scene-select .select{top:267px; left:78px;}
+	.scene-select .info{top:39px; left:82px;}
+
+	.scene-start .player{bottom:250px; left:20px;}
+	.scene-start .start,
+	.scene-start .wait{top:260px; left:20px;}
+	.scene-start .loading{top:82px; left:205px;}
+
+	.scene-touch .touch{background-image:url("img/climbing/touch_m.gif"); background-repeat:no-repeat; background-size:cover; width:320px; height:480px; position:absolute; top:0; left:0; margin:0 0 0 0;}
+	.scene-touch .touch .flash1,
+	.scene-touch .touch .flash2{display:none;}
+
+	.scene-win .result{top:125px;}
+	.scene-win .winbg{top:156px;}
+	.scene-win .player{top:176px;}
+	.scene-win .txt{top:290px;}
+	.scene-win .plank{right:6px;}
+
+}
+
+@media all and (orientation:landscape) {
+	.scene{width:480px;height:320px;}
+
+	.scene-connent .connent-phone{background-image:url("img/Steeplechase/mico_connect2.png"); background-repeat:no-repeat; background-size:cover; width:232px; height:113px; top:100px; left:0;}
+	.scene-connent .cing{top:122px; left:195px; width:40px; height:70px;}
+	.scene-connent .connent-pc{top:77px; left:237px;}
+
+	.scene-select .select{top:73px; left:42px;}
+	.scene-select .info{top:60px; left:262px;}
+
+	.scene-start .player{bottom:142px; left:100px;}
+	.scene-start .start,
+	.scene-start .wait{top:194px; left:100px;}
+	.scene-start .loading{top:35px; left:285px;}
+
+	.scene-win .result{top:46px;}
+	.scene-win .winbg{top:83px;}
+	.scene-win .player{top:100px;}
+	.scene-win .txt{top:202px;}
+	.scene-win .plank{right:23px;}
+
+}
+
+@-webkit-keyframes cing {
+	0%,100% {opacity:1;}
+	50% {opacity:0;}
+}
+@-moz-keyframes cing {
+	0%,100% {opacity:1;}
+	50% {opacity:0;}
+}
+@-ms-keyframes cing {
+	0%,100% {opacity:1;}
+	50% {opacity:0;}
+}
+@-o-keyframes cing {
+	0%,100% {opacity:1;}
+	50% {opacity:0;}
+}
+@keyframes cing {
+	0%,100% {opacity:1;}
+	50% {opacity:0;}
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+
+	70% {
+		-webkit-transform: scale(.9);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.05);
+	}
+
+	70% {
+		-moz-transform: scale(.9);
+	}
+
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+
+@-ms-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-ms-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-ms-transform: scale(1.05);
+	}
+
+	70% {
+		-ms-transform: scale(.9);
+	}
+
+	100% {
+		-ms-transform: scale(1);
+	}
+}
+
+@-o-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.05);
+	}
+
+	70% {
+		-o-transform: scale(.9);
+	}
+
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

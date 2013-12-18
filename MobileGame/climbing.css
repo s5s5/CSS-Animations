@@ -1,0 +1,655 @@
+@charset "utf-8";
+/* ===== 体感游戏城——掷标枪 ===== */
+@import url('core_reset.css');/* 全局重置样式 */
+
+.none{display:none;}
+button{border-width:0; background-color:transparent; cursor:pointer;}
+body{background-color:#fff; color:#000;}
+
+.climbing{border:#000 solid 4px; background-color:#FFCC15; max-width:1592px; margin:0 auto;}
+.scene{height:833px;}
+.scene .main{height:833px; margin:0 auto; position:relative;}
+
+.scene2{position:relative;}
+.scene2 .main{width:960px; margin:0 auto; position:relative;}
+.scene2 .phone{position:absolute; bottom:0; left:60px; background-image:url("img/climbing/guide1phone.png"); width:227px; height:574px;}
+.scene2 .line{position:absolute; bottom:390px; left:298px; background-image:url("img/Steeplechase/guide1line.png"); width:64px; height:121px;}
+.scene2 .pc{position:absolute; top:167px; left:400px; background-image:url("img/climbing/guide1pc.png"); width:538px; height:483px;}
+.scene2 .say{position:absolute; top:670px; left:362px; background-image:url("img/Steeplechase/guide1say.png"); width:71px; height:86px;}
+.scene2 .txt{position:absolute; top:683px; left:444px; background-image:url("img/Steeplechase/guide1txt.png"); width:493px; height:61px;}
+
+.scene3{position:relative;}
+.scene3 .main{width:960px; margin:0 auto; position:relative;}
+.scene3 .track{position:absolute; bottom:129px; left:0; height:140px; width:100%; background-color:#FF4C65; border:#000 solid 4px; border-width:4px 0;}
+.scene3 .track .track2{position:absolute; bottom:44px; left:0; height:59px; width:100%; border:#FFF solid 4px; border-width:4px 0;}
+.scene3 .code{position:absolute; top:210px; left:347px; width:275px; height:275px; padding:10px; background-color:#fff; border:#000 solid 4px; border-radius:5px;}
+.scene3 .monkey{position:absolute; top:508px; left:432px; background-image:url("img/Steeplechase/guide2monkey.png"); width:133px; height:146px;}
+.scene3 .say{position:absolute; top:109px; left:192px; background-image:url("img/Steeplechase/guide1say.png"); width:71px; height:86px;}
+.scene3 .txt{position:absolute; top:110px; left:275px; background-image:url("img/climbing/guide2txt.png"); width:529px; height:81px;}
+
+.scene4{position:relative;}
+.scene4 .main{width:960px; margin:0 auto; position:relative;}
+.scene4 .track{position:absolute; bottom:129px; left:0; height:140px; width:100%; background-color:#FF4C65; border:#000 solid 4px; border-width:4px 0;}
+.scene4 .track .track2{position:absolute; bottom:44px; left:0; height:59px; width:100%; border:#FFF solid 4px; border-width:4px 0;}
+.scene4 .code{position:absolute; top:210px; left:347px; width:275px; height:275px; padding:10px; background-color:#fff; border:#000 solid 4px; border-radius:5px;}
+.scene4 .monkey{position:absolute; top:508px; left:432px; background-image:url("img/Steeplechase/guide2monkey.png"); width:133px; height:146px;}
+.scene4 .say{position:absolute; top:56px; left:98px; background-image:url("img/Steeplechase/guide1say.png"); width:71px; height:86px;}
+.scene4 .txt{position:absolute; top:69px; left:180px; background-image:url("img/Steeplechase/guide3txt.png"); width:618px; height:107px;}
+.scene4 .txt .copy{position:absolute; top:61px; left:99px; width:161px; height:35px;}
+.scene4 .phone1{position:absolute; top:211px; left:210px; background-image:url("img/Steeplechase/guide3blue.png"); width:71px; height:122px;}
+.scene4 .phone2{position:absolute; top:211px; left:716px; background-image:url("img/Steeplechase/guide3green.png"); width:71px; height:122px;}
+.scene4 .phone3{position:absolute; top:388px; left:210px; background-image:url("img/Steeplechase/guide3red.png"); width:71px; height:122px;}
+.scene4 .phone4{position:absolute; top:388px; left:716px; background-image:url("img/Steeplechase/guide3yellow.png"); width:71px; height:122px;}
+.scene4 .phone1 .info,
+.scene4 .phone2 .info,
+.scene4 .phone3 .info,
+.scene4 .phone4 .info{position:absolute; top:125px; left:-5px; width:81px; text-align:center; font-family:'微软雅黑'; font-size:14px;}
+.scene4 .phone1 .name,
+.scene4 .phone2 .name,
+.scene4 .phone3 .name,
+.scene4 .phone4 .name{width: 81px;overflow: hidden;white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis;}
+
+.scene5{position:relative;}
+.scene5 .main{width:960px; margin:0 auto; position:relative;}
+.scene5 .track{position:absolute; bottom:129px; left:0; height:140px; width:100%; background-color:#FF4C65; border:#000 solid 4px; border-width:4px 0;}
+.scene5 .track .track2{position:absolute; bottom:44px; left:0; height:59px; width:100%; border:#FFF solid 4px; border-width:4px 0;}
+.scene5 .code{position:absolute; top:210px; left:347px; width:275px; height:275px; padding:10px; background-color:#fff; border:#000 solid 4px; border-radius:5px;}
+.scene5 .monkey{position:absolute; top:508px; left:432px; background-image:url("img/Steeplechase/guide2monkey.png"); width:133px; height:146px;}
+.scene5 .say{position:absolute; top:109px; left:192px; background-image:url("img/Steeplechase/guide1say.png"); width:71px; height:86px;}
+.scene5 .txt{position:absolute; top:110px; left:275px; background-image:url("img/climbing/guide2txt.png"); width:529px; height:81px;}
+.scene5 .phone1{position:absolute; top:211px; left:210px; background-image:url("img/Steeplechase/guide3blue.png"); width:71px; height:122px;}
+.scene5 .phone2{position:absolute; top:211px; left:716px; background-image:url("img/Steeplechase/guide3green.png"); width:71px; height:122px;}
+.scene5 .phone3{position:absolute; top:388px; left:210px; background-image:url("img/Steeplechase/guide3red.png"); width:71px; height:122px;}
+.scene5 .phone4{position:absolute; top:388px; left:716px; background-image:url("img/Steeplechase/guide3yellow.png"); width:71px; height:122px;}
+.scene5 .phone1 .info,
+.scene5 .phone2 .info,
+.scene5 .phone3 .info,
+.scene5 .phone4 .info{position:absolute; top:125px; left:-5px; width:81px; text-align:center; font-family:'微软雅黑'; font-size:14px;}
+.scene5 .phone1 .name,
+.scene5 .phone2 .name,
+.scene5 .phone3 .name,
+.scene5 .phone4 .name{width: 81px;overflow: hidden;white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis;}
+
+.scene7 .main{width:960px; margin:0 auto; position:relative;}
+.scene7 .shake{position:absolute; top:218px; left:267px; background-image:url("img/climbing/touch.png"); width:475px; height:436px;}
+.scene7 .shake .flash1{position:absolute; top:144px; left:219px; width:17px; height:93px; background-color:#F3F3F3;}
+.scene7 .shake .flash2{position:absolute; top:144px; left:241px; width:17px; height:93px; background-color:#F3F3F3;}
+.scene7 .say{position:absolute; top:110px; left:278px; background-image:url("img/climbing/say.png"); width:68px; height:95px;}
+.scene7 .txt{position:absolute; top:123px; left:359px; background-image:url("img/climbing/txt.png"); width:372px; height:61px;}
+
+.scene1{position:relative; background-color:#7ACFE4; height:auto;}
+.scene1 .bg .bg1{background:url("img/climbing/bg1.jpg") no-repeat center top; height:800px;}
+.scene1 .bg .bg2{background:url("img/climbing/bg2.jpg") no-repeat center top; height:1000px;}
+.scene1 .bg .bg3{background:url("img/climbing/bg3.jpg") no-repeat center top; height:837px;}
+.scene1 .main{width:960px; position:absolute; top:0; left:50%; margin-left:-480px;}
+.scene1 .main .win{}
+.scene1 .main .win .winbg{position:absolute; top:238px; left:401px; background-image:url("img/climbing/g.png"); width:154px; height:38px;}
+.scene1 .main .win .wplayer{position:absolute; top:234px; left:399px; width:146px; height:148px; text-align:center;}
+.scene1 .main .win .wplayer img{height:148px;}
+.scene1 .main .win .txt{position:absolute; top:127px; left:381px; width:178px; height:45px; background:url("img/climbing/utxt.png"); font-family:'微软雅黑'; font-size:20px; line-height:38px; text-align:center;}
+.scene1 .main .win .tdp{position:absolute; top:179px; left:400px; width:140px; height:84px; background:url("img/climbing/tdp.png");}
+.scene1 .main .player{position:absolute; top:2265px; left:433px; width:92px; height:153px;}
+.scene1 .main .player .ltxt{position:absolute; top:-22px; left:-115px; background-image:url("img/climbing/ltxt.png"); width:127px; height:37px; font-family:'微软雅黑'; font-size:20px; line-height:37px; text-align:center;}
+.scene1 .main .player .rtxt{position:absolute; top:56px; left:95px; background-image:url("img/climbing/rtxt.png"); width:127px; height:37px; font-family:'微软雅黑'; font-size:20px; line-height:37px; text-align:center;}
+.scene1 .main .bar{position:absolute; top:1832px; left:1px; background-image:url("img/climbing/bar.png"); width:312px; height:41px;}
+.scene1 .main .bar .baring{position:absolute; top:28px; left:0; background-image:url("img/climbing/baring.png"); width:292px; height:13px;}
+.scene1 .main .bar .baring .ico{position:absolute; top:-18px; right:-19px; background-image:url("img/climbing/hplayer.png"); width:38px; height:51px;}
+.scene1 .main .yun{position:absolute; top:354px; left:247px; background-image:url("img/climbing/yun.png"); width:463px; height:247px; filter:alpha(opacity=60); opacity:0.6;}
+.scene1 .main .player .game_canvas{width:92px; height:152px; background-image:url("img/climbing/pplayer.png");}
+.scene1 .main .player .game_animation_step0{background-position:0 0;}
+.scene1 .main .player .game_animation_step1{background-position:-100px 0;}
+.scene1 .main .player .game_animation_step2{background-position:-200px 0;}
+.scene1 .main .player .game_animation{
+	-webkit-animation:gangham 1000ms steps(3, start) infinite;
+	-moz-animation:gangham 1000ms steps(3, start) infinite;
+	-ms-animation:gangham 1000ms steps(3, start) infinite;
+	-o-animation:gangham 1000ms steps(3, start) infinite;
+	animation:gangham 1000ms steps(3, start) infinite;
+}
+
+.scene10{position:relative;}
+.scene10 .main{width:960px; margin:0 auto; position:relative;}
+.scene10 .main .result{position:absolute; top:170px; left:50%; margin-left:-140px; width:280px; height:320px; background-position:center center; background-repeat:no-repeat;}
+.scene10 .main .result_s{background-image:url("img/Javelin/s.png");}
+.scene10 .main .result_a{background-image:url("img/Javelin/a.png");}
+.scene10 .main .result_b{background-image:url("img/Javelin/b.png");}
+.scene10 .main .result_c{background-image:url("img/Javelin/c.png");}
+.scene10 .main .result_d{background-image:url("img/Javelin/d.png");}
+.scene10 .main .winbg{position:absolute; top:260px; left:50%; margin-left:-110px; background-image:url("img/Javelin/winbg.png"); width:220px; height:54px;}
+.scene10 .main .player{position:absolute; top:278px; left:50%; margin-left:-110px; width:220px; text-align:center;}
+.scene10 .main .txt{position:absolute; top:480px; left:0; width:100%; text-align:center; font-weight:bold; line-height:1;}
+.scene10 .main .txt h2{font-family:tahoma; font-size:110px;}
+.scene10 .main .txt p{font-family:'微软雅黑'; font-size:30px;}
+.scene10 .plank{position:absolute; top:0; left:731px; background-image:url("img/Steeplechase/playagain.png"); width:219px; height:198px;}
+.scene10 .plank .again{position:absolute; top:116px; left:25px; width:169px; height:59px;}
+.scene10 .plank .chk_share{position:absolute; top:190px; left:28px; width:28px; height:28px; cursor:pointer; background-image:url("img/Steeplechase/share_chk.png"); display:none;}
+.scene10 .plank .chk_share_n{position:absolute; top:190px; left:28px; width:28px; height:28px; cursor:pointer; background-image:none; display:none;}
+.scene10 .prize{position:absolute; top:198px; left:731px; background-image:url("img/climbing/prize.png"); width:219px; height:154px;}
+.scene10 .prize p{padding:48px 38px 0; font-size:16px; font-family:'微软雅黑'; text-align:center;}
+.scene10 .quick_way{position: absolute;top: 352px;left: 724px;}
+.scene10 .quick_way a{display: block;width:226px;height: 155px;background-image: url(img/climbing/quick_way.png);background-repeat: no-repeat; }
+
+.scene10 .top{position:absolute; top:0; left:0; background-image:url("img/climbing/top.png"); width:219px; height:608px; overflow:hidden;}
+.scene10 .top .num{width:23px; height:23px; display:inline-block; background-color:#66D0D1; border-radius:23px; text-align:center; line-height:23px; color:#fff;}
+.scene10 .top .my{margin:129px 0 5px 9px; height:57px; position:relative;}
+.scene10 .top .my .num{position:absolute; top:17px; left:5px; background-color:#FF4C65;}
+.scene10 .top .my .score{position:absolute; top:20px; left:135px; font-size:14px; color:#FF4C65;}
+.scene10 .top .list{height:350px; margin:0 0 0 9px; position:relative;}
+.scene10 .top .list .item{height:50px; position:relative;}
+.scene10 .top .list .item .num{position:absolute; top:13px; left:5px;}
+.scene10 .top .list .item .pic{position:absolute; top:7px; left:35px; width:33px; height:33px; border:#000 solid 1px;}
+.scene10 .top .list .item .name{position:absolute; top:16px; left:75px; font-size:14px; width: 55px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.scene10 .top .list .item .score{position:absolute; top:16px; left:135px; font-size:14px;}
+.scene10 .top .list .item123 .num{background-color:#FF4C65;}
+.scene10 .top .page{height:40px; margin:8px 9px 0 9px; text-align:center; line-height:42px; color:#8C8C8C; position:relative;}
+.scene10 .top .page strong{color:#000;}
+.scene10 .top .page .pre{position:absolute; top:17px; left:68px; width:8px; height:11px; background-color:transparent; border-bottom:0;}
+.scene10 .top .page .next{position:absolute; top:17px; left:124px; width:8px; height:11px; background-color:transparent; border-bottom:0;}
+
+.foot{height:55px; border-top:#000 solid 4px; background-color:#E6E4DA; position:relative;}
+.foot .qzone{position:absolute; top:4px; left:50px; background-image:url("img/Javelin/qzonelogo.png"); width:530px; height:45px;}
+.foot .share{position:absolute; top:5px; right:41px; display:none;}
+.foot .share .soundon{background-image:url("img/Javelin/soundon.png"); width:43px; height:44px; float:left; margin-right:9px;}
+.foot .share .shareqzone{background-image:url("img/Javelin/shareqzone.png"); width:43px; height:44px; float:left; margin-right:9px;}
+.foot .share .sharetqq{background-image:url("img/Javelin/sharetqq.png"); width:43px; height:44px; float:left; margin-right:9px;}
+.foot .share .soundon:hover,
+.foot .share .shareqzone:hover,
+.foot .share .sharetqq:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.scene2 .animation .line{
+	-webkit-animation: flash2 800ms ease both infinite;
+	-moz-animation: flash2 800ms ease both infinite;
+	-ms-animation: flash2 800ms ease both infinite;
+	-o-animation: flash2 800ms ease both infinite;
+	animation: flash2 800ms ease both infinite;
+}
+
+.scene3 .animation .code,
+.scene3 .animation .monkey,
+.scene4 .animation .code,
+.scene4 .animation .monkey,
+.scene5 .animation .code,
+.scene5 .animation .monkey{
+	-webkit-animation: flyfu 500ms ease both;
+	-moz-animation: flyfu 500ms ease both;
+	-ms-animation: flyfu 500ms ease both;
+	-o-animation: flyfu 500ms ease both;
+	animation: flyfu 500ms ease both;
+
+}
+.scene3 .animation .say,
+.scene4 .animation .say,
+.scene5 .animation .say,
+.scene7 .animation .say{
+	-webkit-animation: flyI  500ms ease both 500ms;
+	-moz-animation: flyI  500ms ease both 500ms;
+	-ms-animation: flyI  500ms ease both 500ms;
+	-o-animation: flyI  500ms ease both 500ms;
+	animation: flyI  500ms ease both 500ms;
+
+}
+.scene3 .animation .txt,
+.scene4 .animation .txt,
+.scene5 .animation .txt,
+.scene7 .animation .txt{
+	-webkit-animation: flyfl 500ms ease both 500ms;
+	-moz-animation: flyfl 500ms ease both 500ms;
+	-ms-animation: flyfl 500ms ease both 500ms;
+	-o-animation: flyfl 500ms ease both 500ms;
+	animation: flyfl 500ms ease both 500ms;
+
+}
+
+.scene4 .animation .phone1,
+.scene4 .animation .phone2,
+.scene4 .animation .phone3,
+.scene4 .animation .phone4,
+.scene5 .animation .phone1,
+.scene5 .animation .phone2,
+.scene5 .animation .phone3,
+.scene5 .animation .phone4{
+	-webkit-animation: flyo 500ms ease both;
+	-moz-animation: flyo 500ms ease both;
+	-ms-animation: flyo 500ms ease both;
+	-o-animation: flyo 500ms ease both;
+	animation: flyo 500ms ease both;
+
+}
+
+.scene7 .animation .shake{
+	-webkit-animation: fly 1000ms ease both;
+	-moz-animation: fly 1000ms ease both;
+	-ms-animation: fly 1000ms ease both;
+	-o-animation: fly 1000ms ease both;
+	animation: fly 1000ms ease both;
+}
+
+.scene7 .animation .shake .flash1{
+	-webkit-animation: flash2 1s ease both infinite;
+	-moz-animation: flash2 1s ease both infinite;
+	-ms-animation: flash2 1s ease both infinite;
+	-o-animation: flash2 1s ease both infinite;
+	animation: flash2 1s ease both infinite;
+}
+
+.scene7 .animation .shake .flash2{
+	-webkit-animation: flash2 1s ease both infinite 500ms;
+	-moz-animation: flash2 1s ease both infinite 500ms;
+	-ms-animation: flash2 1s ease both infinite 500ms;
+	-o-animation: flash2 1s ease both infinite 500ms;
+	animation: flash2 1s ease both infinite 500ms;
+}
+.scene10 .animation .result{
+	-webkit-animation: bounceIn 500ms ease both 200ms;
+	-moz-animation: bounceIn 500ms ease both 200ms;
+	-ms-animation: bounceIn 500ms ease both 200ms;
+	-o-animation: bounceIn 500ms ease both 200ms;
+	animation: bounceIn 500ms ease both 200ms;
+
+}
+.scene10 .animation .winbg,
+.scene10 .animation .player{
+	-webkit-animation: bounceIn 500ms ease both;
+	-moz-animation: bounceIn 500ms ease both;
+	-ms-animation: bounceIn 500ms ease both;
+	-o-animation: bounceIn 500ms ease both;
+	animation: bounceIn 500ms ease both;
+
+}
+.scene10 .animation .txt{
+	-webkit-animation: bounceIn 500ms ease both 400ms;
+	-moz-animation: bounceIn 500ms ease both 400ms;
+	-ms-animation: bounceIn 500ms ease both 400ms;
+	-o-animation: bounceIn 500ms ease both 400ms;
+	animation: bounceIn 500ms ease both 400ms;
+
+}
+
+@-webkit-keyframes flyfu {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes flyfu {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+@-ms-keyframes flyfu {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes flyfu {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes flyfu {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes flyI  {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes flyI  {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@-ms-keyframes flyI  {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@-o-keyframes flyI  {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes flyI  {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes flyfl {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes flyfl {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+@-ms-keyframes flyfl {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes flyfl {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes flyfl {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@-webkit-keyframes flyo {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+
+	70% {
+		-webkit-transform: scale(.9);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes flyo {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.05);
+	}
+
+	70% {
+		-moz-transform: scale(.9);
+	}
+
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+@-ms-keyframes flyo {
+	0% {
+		opacity: 0;
+		-ms-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-ms-transform: scale(1.05);
+	}
+
+	70% {
+		-ms-transform: scale(.9);
+	}
+
+	100% {
+		-ms-transform: scale(1);
+	}
+}
+
+@-o-keyframes flyo {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.05);
+	}
+
+	70% {
+		-o-transform: scale(.9);
+	}
+
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes flyo {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+
+	70% {
+		-webkit-transform: scale(.9);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.05);
+	}
+
+	70% {
+		-moz-transform: scale(.9);
+	}
+
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+
+@-ms-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-ms-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-ms-transform: scale(1.05);
+	}
+
+	70% {
+		-ms-transform: scale(.9);
+	}
+
+	100% {
+		-ms-transform: scale(1);
+	}
+}
+
+@-o-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.05);
+	}
+
+	70% {
+		-o-transform: scale(.9);
+	}
+
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes flash2  {
+	0%,100% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
+@-moz-keyframes flash2  {
+	0%,100% {opacity: 0;}
+	50% {opacity: 1;}
+}
+@-ms-keyframes flash2  {
+	0%,100% {opacity: 0;}
+	50% {opacity: 1;}
+}
+@-o-keyframes flash2  {
+	0%,100% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
+@keyframes flash2 {
+	0%,100% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
+@-webkit-keyframes gangham{
+	0%{ background-position:0 0; }
+	100%{ background-position:-300px 0; }
+}
+@-moz-keyframes gangham{
+	0%{ background-position:0 0; }
+	100%{ background-position:-300px 0; }
+}
+@-ms-keyframes gangham{
+	0%{ background-position:0 0; }
+	100%{ background-position:-300px 0; }
+}
+@-o-keyframes gangham{
+	0%{ background-position:0 0; }
+	100%{ background-position:-300px 0; }
+}
+@keyframes gangham{
+	0%{ background-position:0 0; }
+	100%{ background-position:-300px 0; }
+}

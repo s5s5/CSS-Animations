@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="google" value="notranslate">
+
+	<!--
+	Copyright (c) 2013 by Zach Saucier (http://codepen.io/Zeaklous/pen/rmDdx)
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	-->
+
+	<title>CSS Callback Functions Using Iteration - CodePen</title>
+
+	<style>/* Most of the heart's CSS came from the Shapes of CSS  */
+		/* http://css-tricks.com/examples/ShapesOfCSS/          */
+	body{background-color:#Fff;}
+	.heart {
+		position: relative;
+		width: 100px;
+		height: 90px;
+		margin: 30px;
+
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		-moz-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: center center;
+		-moz-transform-origin: center center;
+		-ms-transform-origin: center center;
+		-o-transform-origin: center center;
+		transition: all 1s;
+	}
+	.heart.css {
+		-webkit-animation-delay:1s;
+		-moz-animation-delay:1s;
+		-ms-animation-delay:1s;
+		-o-animation-delay:1s;
+		animation-dely:1s;
+	}
+	.heart.animated {
+		-webkit-animation: 1600ms pulsate infinite alternate ease-in-out;
+		-moz-animation: 1600ms pulsate infinite alternate ease-in-out;
+		-ms-animation: 1600ms pulsate infinite alternate ease-in-out;
+		-o-animation: 1600ms pulsate infinite alternate ease-in-out;
+		animation: 1600ms pulsate infinite alternate ease-in-out;
+	}
+	.heart:before,
+	.heart:after {
+		position: absolute;
+		content: "";
+		left: 50px;
+		top: 0;
+		width: 50px;
+		height: 80px;
+		background: red;
+		-moz-border-radius: 50px 50px 0 0;
+		border-radius: 50px 50px 0 0;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transform-origin: 0 100%;
+		-moz-transform-origin: 0 100%;
+		-ms-transform-origin: 0 100%;
+		-o-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+	}
+	.heart:after {
+		left: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transform-origin: 100% 100%;
+		-moz-transform-origin: 100% 100%;
+		-ms-transform-origin: 100% 100%;
+		-o-transform-origin: 100% 100%;
+		transform-origin :100% 100%;
+	}
+	.heart.css:hover {
+		-webkit-transform: scale(2);
+		-moz-transform: scale(2);
+		-ms-transform: scale(2);
+		-o-transform: scale(2);
+		transform: scale(2);
+		-webkit-animation:'';
+		-moz-animation:none;
+		-ms-animation:'';
+		-o-animation:'';
+		animation:'';
+	}
+
+	@keyframes pulsate {
+		0% { transform: scale(1); }
+		50% { transform: scale(1.3); }
+		100% { transform: scale(1); }
+	}
+	@-webkit-keyframes pulsate {
+		0% { -webkit-transform: scale(1); }
+		50% { -webkit-transform: scale(1.3); }
+		100% { -webkit-transform: scale(1); }
+	}
+	@-moz-keyframes pulsate {
+		0% { -moz-transform: scale(1); }
+		50% { -moz-transform: scale(1.3); }
+		100% { -moz-transform: scale(1); }
+	}
+	@-ms-keyframes pulsate {
+		0% { -ms-transform: scale(1); }
+		50% { -ms-transform: scale(1.3); }
+		100% { -ms-transform: scale(1); }
+	}
+	@-o-keyframes pulsate {
+		0% { -o-transform: scale(1); }
+		50% { -o-transform: scale(1.3); }
+		100% { -o-transform: scale(1); }
+	}</style>
+
+</head>
+
+<body onload="_l='t';">
+
+<script src="../js/jquery-2.0.3.min.js"></script>
+
+<h3 style="display:none;">Pure CSS</h3>
+<div class='heart animated css' style="display:none;"></div>
+
+<h3>动画的回调函数</h3>
+<div class='heart animated'></div>
+
+<script>
+
+</script>
+
+<script>
+	var heart = document.getElementsByClassName('heart')[1],
+			pfx = ["webkit", "moz", "MS", "o", ""],
+			hovered = false;
+
+	function AnimationListener() {
+		if(hovered)
+		{
+			heart.classList.remove('animated');
+			heart.style.webkitTransform = 'scale(2)';
+			heart.style.MozTransform = 'scale(2)';
+			heart.style.msTransform = 'scale(2)';
+			heart.style.OTransform = 'scale(2)';
+			heart.style.transform = 'scale(2)';
+		}
+	}
+
+	function TransitionListener() {
+		if(!hovered)
+		{
+			heart.classList.add('animated');
+		}
+	}
+
+	function PrefixedEvent(element, type, callback) {
+		for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			element.addEventListener(pfx[p]+type, callback, false);
+		}
+	}
+
+	PrefixedEvent(heart, "AnimationIteration", AnimationListener);
+
+	heart.onmouseover = function() {
+		hovered = true;
+	}
+	heart.onmouseout = function() {
+		setTimeout(function() { hovered = false; }, 500);
+		PrefixedEvent(heart, "TransitionEnd", TransitionListener);
+		heart.style.webkitTransform = 'scale(1)';
+		heart.style.MozTransform = 'scale(1)';
+		heart.style.msTransform = 'scale(1)';
+		heart.style.OTransform = 'scale(1)';
+		heart.style.transform = 'scale(1)';
+	}
+</script>
+
+<script>
+	// Once the entire pen's loaded we send a message to embeds
+	// to resize again in case they're using auto to the size the embed
+	if (document.location.search.match(/type=embed/gi)) {
+		window.parent.postMessage('resize', "*");
+	}
+</script>
+
+</body>
+
+</html>

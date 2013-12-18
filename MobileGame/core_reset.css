@@ -1,0 +1,52 @@
+/*
+ * Copy Right: Tencent ISUX
+ * Project:Qzone V6
+ * Comments:CSS Reset
+ * Export to:all
+ * @author damao
+ * @param os_ 写在<html 里的系统类别class | xp下的雅黑泪流满面 | http://www.14px.com/?p=46 各种行高对齐...
+ * @exception textarea 禁用横向resize防止布局错乱
+ * @see Copyright (c) 2010, Yahoo! Inc. All rights reserved.Code licensed under the BSD License:http://developer.yahoo.com/yui/license.htmlversion: 3.3.0build: 3167
+ * @see Copyright (c) http://meyerweb.com/eric/thoughts/2011/01/03/reset-revisited/
+ */
+html {font-size: 62.5%;font-family: Tahoma;} /* Font sizing with rem http://snook.ca/archives/html_and_css/font-size-with-rem */
+/*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input,button, textarea, p, blockquote, th, td, hr {margin: 0;padding: 0;}*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,input,button, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{margin: 0;padding: 0;}
+body{line-height:1.333;font-size:12px;font-size:1.2rem;}/*1.333 http://www.99css.com/archives/830 | -webkit-text-size-adjust:none; 无法缩放 这玩意儿乱用pony哥会找你的*/
+h1, h2, h3, h4, h5, h6{font-size:100%}/*统一各浏览器默认大小*/
+input, textarea, select,button{font-size: 12px;font-weight: normal;font-family:inherit;}
+input[type="button"],input[type="submit"], select,button{cursor:pointer;}
+table {border-collapse: collapse;border-spacing: 0;}
+address, caption, cite, code, dfn, em, th, var {font-style: normal;font-weight: normal;}
+li {list-style: none;}
+caption, th {text-align: left;}
+q:before, q:after {content: '';}
+abbr, acronym {border: 0;font-variant: normal;}
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+fieldset, img,a img, iframe {border-width:0;border-style:none;}/*a img for IE6*/
+iframe{overflow:hidden;}/*TT啊,你个2B TT下面才有这个滚动条*/
+img{-ms-interpolation-mode: bicubic;}/* https://developer.mozilla.org/En/CSS/image-rendering */
+textarea{resize:vertical;overflow-y:auto;}/*resize风险未知,避免布局错乱先写上|auto为了ie下去掉默认侧边*/
+legend {color: #000;}
+/*a:link,a:visited {text-decoration: none;}*/
+a{text-decoration:none;}/* 去掉伪类 */
+a:hover{text-decoration:underline;} /*huberyhuang和ross商量的结果*/
+
+hr{height:0}/*bugfix for ie6|7 1px background*/
+label{cursor:pointer}/*必须用显示for=id写法 http://www.topcss.org/?p=349*/
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
