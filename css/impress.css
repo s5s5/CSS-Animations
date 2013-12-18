@@ -120,7 +120,7 @@ body     { pointer-events: none; }
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 200px;
+    top: 0;
     
     background: rgba(0,0,0,0.5);
     color: #EEE;
@@ -131,19 +131,6 @@ body     { pointer-events: none; }
     
     z-index: 100;
     
-    opacity: 0;
-    
-    -webkit-transform: translateY(400px);
-    -moz-transform:    translateY(400px);
-    -ms-transform:     translateY(400px);
-    -o-transform:      translateY(400px);
-    transform:         translateY(400px);
-
-    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
-    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
-    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
-    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
-    transition:         opacity 1s,         transform 0.5s 1s;
 }
 
 .impress-on-bored .hint {
