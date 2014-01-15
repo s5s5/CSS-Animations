@@ -413,17 +413,38 @@
             });
             PPTi++
         });
-        impress().init();
+        var api = impress();
+        api.init();
         $(document).keydown(function (event) {
             if (event.which == 82) {
-                var frameA = $('.active .frame'),
-                    frameSRC = frameA.data('iframesrc');
-                $('.frame').hide();
-                frameA.fadeIn()
-                      .removeAttr('src')
-                      .attr('src', frameSRC);
+                showDemo();
             }
         });
+        var num = 0,
+            demo = 0;
+        setInterval(function(){
+            $.getJSON('control.json',function(data){
+                console.log(data);
+                if (data.num > num) {
+                    api.next();
+                } else if (data.num < num) {
+                    api.prev();
+                }
+                if (data.demo > demo) {
+                    showDemo();
+                    demo = data.demo;
+                }
+                num = data.num;
+            });
+        },250);
+        function showDemo() {
+            var frameA = $('.active .frame'),
+                frameSRC = frameA.data('iframesrc');
+            $('.frame').hide();
+            frameA.fadeIn()
+                .removeAttr('src')
+                .attr('src', frameSRC);
+        }
     });
 </script>
 </body>
