@@ -1,11 +1,18 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>PPT控制器</title>
-    <meta name="author" content="s5s5"/>
+    <meta name="author" content="s5s5">
+    <style>
+        html,body{margin:0; padding:0;}
+        body{background-color:#000; color:#fff; text-align:center;}
+        #next{width:300px; height:220px; background-color:#fff; color:#000; border:#0E0 dashed 3px; font-size:50px; margin:10px auto; display:block;}
+        #prev,
+        #demo{width:140px; height:100px; background-color:#eee; color:#000; border:#666 dashed 2px; font-size:20px; overflow:hidden;}
+    </style>
 </head>
 
 <body>
@@ -38,11 +45,9 @@ if (!@$f = fopen("control.json", "r")) { //无文件时创建
 
 if (!empty($_POST['next'])) {
     $arr['num']++;
-    $arr['demo'] = 0;
 }
 if (!empty($_POST['prev'])) {
     $arr['num']--;
-    $arr['demo'] = 0;
 }
 if (!empty($_POST['demo'])) {
     $arr['demo']++;
@@ -55,18 +60,26 @@ fclose($ff);
 ?>
 <button type="button" id="next">下一页</button>
 <button type="button" id="prev">上一页</button>
-<button type="button" id="demo">显示DEMO</button>
+<button type="button" id="demo">DEMO</button>
 <script src="js/jquery-2.0.3.min.js"></script>
 <script>
     $(function () {
+        var sound = new Audio('piano.mp3');
+        sound.play();
         $('#next').click(function () {
             $.post('m.php', 'next=true');
+            sound.currentTime = 0;
+            sound.play();
         });
         $('#prev').click(function () {
             $.post('m.php', 'prev=true');
+            sound.currentTime = 0;
+            sound.play();
         });
         $('#demo').click(function () {
             $.post('m.php', 'demo=true');
+            sound.currentTime = 0;
+            sound.play();
         });
     });
 </script>

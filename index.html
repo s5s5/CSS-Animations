@@ -422,8 +422,9 @@
         });
         var num = 0,
             demo = 0;
+        $.ajax({cache:false});
         setInterval(function(){
-            $.getJSON('control.json',function(data){
+            $.getJSON('control.json?' + parseInt(Math.random() * 100000),function(data){
                 console.log(data);
                 if (data.num > num) {
                     api.next();
