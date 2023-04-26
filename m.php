@@ -61,7 +61,7 @@ fclose($ff);
 <button type="button" id="next">下一页</button>
 <button type="button" id="prev">上一页</button>
 <button type="button" id="demo">DEMO</button>
-<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
 <script>
     $(function () {
         var sound = new Audio('piano.mp3');
